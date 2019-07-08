@@ -1,0 +1,76 @@
+.onion { position: relative; width: 440px; height: 360px; margin: auto; }
+.onion::-webkit-scrollbar-thumb { background: var(--accent, #222); }
+
+.onion-tab {
+  position: absolute;
+  top: 0px;
+  width: 440px;
+  height: 360px;
+  background: var(--accent, #222);
+}
+
+.onion-name {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  position: absolute;
+  height: 100%;
+  text-align: right;
+  padding-bottom: 10%;
+  box-sizing: border-box;
+  left: -54px;
+  font: 40px 'Prata';
+  text-transform: uppercase;
+  color: var(--accent, #222);
+  background: #fff;
+}
+
+.onion-image {
+  margin: 0px 12.5px;
+}
+
+.onion-text {
+  position: absolute;
+  top: 0px;
+  left: 145px;
+  width: 295px;
+  height: 360px;
+  box-sizing: border-box;
+  padding: 15px;
+  color: #fff;
+  font: 11.5px/1.1em 'Hind Vadodara';
+  mix-blend-mode: difference;
+  overflow: auto;
+  text-align: justify;
+}
+.onion-text h1 { margin: 3px 33px;
+  font: bold 12px Prata; }
+.onion-text h1:before { content: var(--icon, '\ec04'); font-family:'honeybee'; position: relative; left: -5px; }
+.onion-text b { color: #fff; font: 13px Prata; }
+.onion-text i { color: #fff; }
+
+.onion-rel {
+  width: 145px;
+  height: 100px;
+  overflow: auto;
+  position: absolute;
+  bottom: 12.5px;
+  left: 0px;
+  background: #ddd;
+  padding: 8px;
+  box-sizing: border-box;
+  font: 8.5px 'Open Sans';
+  color: #111;
+}
+
+pos, neg, neu { display: inline-block;
+  margin: 0px 4px 0px 1px; }
+pos:before, neg:before, neu:before {font-size: 5px; top: -1px; position: relative; margin-right: 3px; font-family: "Font Awesome 5 Free";font-weight: 900;}
+pos:before {content:'\f067';} neg:before {content:'\f00d';} neu:before {content:'\f068';}
+
+  .onion input[type=radio] { display: none; }
+  .onion input[type=radio]:checked + label + .onion-tab { z-index: 1; }
+  .onion label { position: relative;
+  display: block;
+  left: 447px; top: 7px; margin: 0px; }
+  .onion label ~ label {}
+  .onion label:before { content: var(--icon, '\ec04'); color: var(--accent, #222); font-size: 12px; font-weight: 900; font-family: 'RPGAwesome', 'honeybee','Font Awesome 5 Free'; }
