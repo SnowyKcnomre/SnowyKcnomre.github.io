@@ -1,0 +1,333 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Vidaloka|Roboto:400,200|Playfair+Display&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"></script>
+
+<style>
+.arrow {
+ top: 0px;
+ height: 0px;
+ width: 0px;
+ border: 20px solid transparent;
+ position: absolute;
+}
+.left-arrow { border-right: 30px solid #999;
+ right: 50%; } .right-arrow { border-left: 30px solid #999; left: 50%; }
+.title {
+ width: 100%;
+ padding: 46px;
+ font: 3em/100% 'Vidaloka';
+ background: #212121;
+ color: #ccc;
+ box-sizing: border-box;
+ position: relative;
+ top: 0px;
+ transition: 1s ease;
+ border-radius: 6px 6px 0px 0px;
+}
+@keyframes blink{
+0%{display: 0;}
+50%{opacity: 0.5;}
+100%{opacity: 1;}
+}
+.blink {
+ position: relative;
+ left: 0vw;
+}
+.blink:after {
+ content:'|';
+ position: relative;
+ top: -4px;
+ left: 10px;
+ animation: blink 1.4s ease infinite;
+}
+.title-after {
+ position: absolute;
+ display: block;
+ height: 39px;
+ width: calc(100% - 16px);
+ background: linear-gradient(60deg,#3d3d3d,#2c2c2c);
+ border-bottom: 10px solid #474343;
+}
+.title span { color: #6c6c6c; }
+.main-container { margin-top: 35px; position: relative; }
+.image-cont {
+ display: grid;
+ grid-template: auto / auto auto auto auto auto auto auto;
+ position: absolute;
+ left: 50%;
+ margin: 20px 0px;
+ overflow: hidden;
+}
+.image-slide {
+ height: 100vh;
+ display: block;
+ position: relative;
+ left: 0%;
+ transition: 1s ease;
+}
+.text-boxes {
+ background: #1a1a1a;
+ color: #9a9a9a;
+ width: 100vh;
+ font: 1.2em/145% Roboto;
+ position: relative;
+ left: 50%;
+ margin: 0px 0px 15px -50vh;
+ min-height: 50px;
+ outline: 0.5px solid #cacaca;
+ outline-offset: -11px;
+ border: #1a1a1a solid 11px;
+ z-index: 2;
+ overflow: hidden;
+ grid-area: 2 / span 1 / 2 / span 1;
+ display: grid;
+ grid-template: auto / 100% 100% 100% 100% 100% 100% 100%;
+ box-sizing: border-box;
+}
+section {
+ margin: 24px;
+ position: relative;
+ right: 0%;
+ transition: 1.4s ease;
+}
+section h2 {
+ font-size: 0.76em;
+ font-weight: 200;
+ font-style: italic;
+ margin: 10px 15px;
+ padding: 2px 15px;
+ border-left: 0.5px solid;
+}
+
+.partOne {opacity: 1; transition: 1s ease;}
+partTwo {opacity:0;
+transition: 1s ease;}
+
+.samebox {
+ position: absolute;
+ z-index: 2;
+ background-size: cover;
+ left: 50%;
+ top: 20px;
+}
+.quote1-box {
+ position: relative;
+ background: #000000bd;
+ color: #cfcfcf;
+ font: 2.5em/100% Vidaloka;
+ padding: 15%;
+ top: 11%;
+ left: 11%;
+ transform:scale(0);
+ transform-origin: 89% 0%;
+ z-index: -1;
+ transition: z-index 0s linear, transform 0.5s ease-in;
+}
+.quote1-box:before, .quote1-box:after {
+ font-size: 1.9em;
+ opacity: 0.7;
+ position: relative;
+}
+.quote1-box:before {
+    content: "“";
+}
+.quote1-box:after {
+    content: "„";
+}
+.x-close {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #c2c2c2;
+    font-size: 2em;
+    position: absolute;
+    cursor: copy;
+ z-index: -1;
+ opacity: 0;
+ transition: z-index 0s linear, opacity 0.8s ease-in;
+}
+.x-close:hover {text-shadow: 0 0 11px #888;}
+.x-close:before {
+ content:'\f067';
+}
+.blackscreen {
+ background: black;
+ position: fixed;
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+ border-radius: 50%;
+ transform: scale(0);
+ transition: 1.7s ease;
+}
+.meta-container {
+    color: #d9d9d9;
+    position: relative;
+    z-index: 0;
+    letter-spacing: 1.2px;
+    font: 2em/200% 'Playfair Display';
+    margin: 0px 15%;
+    opacity: 0;
+    transition: z-index 0s linear, opacity 1.3s 0.5s ease;
+}
+</style>
+
+<div class="title">
+ <div class="blink"><span>E</span>legy written in a country churchyard.</div>
+</div>
+<div class="title-after"></div>
+
+<div class="main-container">
+ <div class="partOne image-cont">
+ <img class="image-slide" src="https://images2.imgbox.com/eb/b4/0UQNosBh_o.png">
+ <img class="image-slide" src="https://images2.imgbox.com/70/17/W0PBnNa9_o.png">
+ <img class="image-slide" src="https://images2.imgbox.com/d2/5e/1b4NIh9p_o.png">
+ <img class="image-slide" src="https://images2.imgbox.com/69/d1/NxKwZuP0_o.png">
+ <img class="image-slide" src="https://images2.imgbox.com/f6/c7/PLNpxgzN_o.png">
+ <img class="image-slide" src="https://images2.imgbox.com/fe/c6/j80Xe1rj_o.png">
+ <img class="image-slide" src="https://images2.imgbox.com/e1/57/bKZ3vWtG_o.png">
+ </div>
+
+<div class="partOne text-boxes">
+  <section><h2>Photo by Kristel Hayes on Unsplash</h2>
+The curfew tolls the knell of parting day,
+<br>The lowing herd wind slowly o'er the lea,
+<br>The plowman homeward plods his weary way,
+<br>And leaves the world to darkness and to me.
+  </section>
+  <section><h2>Photo by Thomas Millot on Unsplash</h2>
+Now fades the glimmering landscape on the sight,
+<br>And all the air a solemn stillness holds,
+<br>Save where the beetle wheels his droning flight,
+<br>And drowsy tinklings lull the distant folds;
+ </section>
+  <section><h2>Photo by Kevin Mueller on Unsplash</h2>
+Save that from yonder ivy-mantled tower<br>
+The moping owl does to the moon complain<br>
+Of such, as wand'ring near her secret bower,<br>
+Molest her ancient solitary reign.
+ </section>
+  <section><h2>Photo by Victoria Palacios on Unsplash</h2>
+Beneath those rugged elms, that yew-tree's shade,<br>
+Where heaves the turf in many a mould'ring heap,<br>
+Each in his narrow cell for ever laid,<br>
+The rude forefathers of the hamlet sleep.</section>
+  <section><h2>Photo by Adrian on Unsplash</h2>
+The breezy call of incense-breathing Morn,
+<br>The swallow twittering from the straw-built shed,<br>
+The cock's shrill clarion, or the echoing horn,<br>
+No more shall rouse them from their lowly bed.</section>
+  <section><h2>Photo by Max Letek on Unsplash</h2>
+For them no more the blazing hearth shall burn,<br>
+Or busy housewife ply her evening care:<br>
+No children run to lisp their sire's return,<br>
+Or climb his knees the envied kiss to share.</section>
+  <section><h2>Photo by Brett Jordan on Unsplash</h2>
+Oft did the harvest to their sickle yield,
+<br>Their furrow oft the stubborn glebe has broke;
+<br>How jocund did they drive their team afield!
+<br>How bowed the woods beneath their sturdy stroke!</section>
+ </div>
+ 
+<partTwo>
+ <img class="samebox secondary-container" src="https://images2.imgbox.com/92/21/8lyV5Vry_o.png"></img>
+  <div class="samebox baka"><div class="quote1-box">
+   here lies the famous and the unknown.</div>
+   <div class="x-close"></div>
+   <div class="blackscreen"></div>
+</div>
+ </partTwo>
+
+ <div class="meta-container">
+   in quiet,<br>
+   slowly walking through the graves,<br>
+   a ruminating soul reads aged and forgotten plaques.
+</div>
+
+<div class="partOne arrow right-arrow"></div>
+<div class="partOne arrow left-arrow"></div>
+ </div>
+ 
+ <script>
+var titleHeight = $('.title').innerHeight();
+var imageHeight = $('.image-slide').outerHeight();
+var mainContainerHeight = $('.main-container').outerHeight();
+var specialSlide = imageHeight - titleHeight;
+
+$('.image-slide').innerHeight(imageHeight -= titleHeight);
+$('.samebox').innerHeight(imageHeight);
+
+var secondImgWidth = $('.secondary-container').innerWidth();
+$('.samebox').innerWidth(secondImgWidth);
+
+var xWidth = $('.x-close').innerWidth();
+var xHeight = $('.x-close').innerHeight();
+
+$('.x-close').css({
+ top: `calc(11% - ${xHeight / 2}px)`,
+ right: `calc(0% - ${xWidth / 2}px)`
+});
+$('.x-close').click(function(){
+  $('.blackscreen').css({"transform": "scale(1)","border-radius": "0%"
+ });
+ $('.meta-container').css({"opacity":"1", "z-index":"2"})
+});
+var docHeight = $(document).height();
+
+$(function(){
+ $('.main-container').hide();
+});
+
+$('.title').hover(function(){
+ $('.main-container').stop(true, true).slideDown(800);
+ $('.title-after').stop(true, true).animate({height: docHeight - 40}, 950);
+ $('.blink').stop(true, true).animate({left: "-100vw"}, 1950);
+ $('.title').stop(true, true).animate({height: "0px",padding: "0px"}, 800);
+});
+
+$('.image-cont').css({
+ 'margin-left':-specialSlide/2,
+ 'margin-right':specialSlide/2
+}).innerWidth(specialSlide).innerHeight(specialSlide);
+
+var sameboxWidth = $('.samebox').innerWidth();
+$('.samebox').css({
+ 'margin-left':-sameboxWidth/2
+});
+
+$('.text-boxes').css('top',specialSlide);
+$('.arrow').css("top",specialSlide/2);
+$('.right-arrow').css("margin-left",specialSlide/2 + 15);
+$('.left-arrow').css("margin-right",specialSlide/2 + 15);
+
+var i = 0;
+var per = 100;
+$('.right-arrow').click(function(){
+ if(i < 6) {
+  i++;
+  $('.image-slide').css('left',-specialSlide * i);
+  per = 100 * i;
+  $('section').css('right', per + "%");
+ } else if(i == 6) {
+  $('.partOne').css('opacity','0');
+  $('partTwo').css('opacity','1');
+ }
+});
+
+$('.left-arrow').click(function(){
+ if(i >= 1) {
+  i--
+  $('.image-slide').css('left',-specialSlide * i);
+  per = 100 * i;
+  $('section').css('right', per + "%");
+ }
+});
+
+$('.baka').hover(function(){
+ $('.quote1-box').css({"z-index":"0", transform:"scale(1)"});
+  $('.x-close').css({"z-index":"0",opacity:"1"});
+}, function(){
+ $('.quote1-box').css({"z-index":"-1",transform:"scale(0)"});
+  $('.x-close').css({"z-index":"-1",opacity:"0"});
+});
+</script>
